@@ -1,0 +1,154 @@
+/* Common styles for different screen sizes */
+
+.intro-text {
+  color: rgb(5, 5, 5);
+  font-weight: 400;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+
+.image {
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-image: url("https://wallpapercave.com/wp/WOiIJSG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.blackBox {
+  background-color: white;
+  padding-top: 25px;
+  font-weight: 400;
+  background-image: radial-gradient(rgb(197, 200, 132), rgb(132, 105, 51));
+  padding-bottom: 25px;
+}
+
+.blackBox h3 {
+  text-align: center;
+}
+
+.contact-me {
+  background-color: rgb(85, 180, 85);
+  padding: 15px 0 15px 15px;
+}
+
+.about-me {
+  background-color: rgb(200, 82, 82);
+}
+
+.card-contact {
+  background-color: red;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-container .card:hover {
+  box-shadow: 0.3rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h5 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 340px;
+  height: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-content p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+#bottom-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 50px;
+  padding-top: 25px;
+  padding-left: 20px;
+}
+
+.bottom-box {
+  padding: 15px 0 15px 15px;
+  border-radius: 15px;
+  color: white;
+}
+
+#bottom-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#bottom-section p {
+  line-height: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .intro-text {
+    left: 10%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #bottom-section {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .bottom-box {
+    padding: 15px;
+  }
+
+  .contact-me,
+  .about-me {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro-text {
+    left: 5%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
